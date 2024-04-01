@@ -40,6 +40,9 @@ public class MainController {
         if (userRepository.existsByEmail(user.getEmail())) {
             throw new InvalidDataException("Email already exists: " + user.getEmail());
         }
+        if (userRepository.existsByUsername(user.getUsername())) {
+            throw new InvalidDataException("Username already exists: " + user.getUsername());
+        }
         User savedUser = userRepository.save(user);
         return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
     }

@@ -1,0 +1,13 @@
+.btn {
+    @apply font-semibold px-3 py-1.5 shadow-md transition ease-in-out;
+    @apply text-slate-300 hover:text-slate-50;
+    @apply border border-slate-300 rounded;
+}
+
+.vstack {
+    @apply flex flex-col gap-3
+}
+
+.hstack {
+    @apply flex gap-3
+}

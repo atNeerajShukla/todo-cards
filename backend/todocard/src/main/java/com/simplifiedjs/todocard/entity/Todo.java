@@ -23,6 +23,5 @@ public class Todo {
 
     private Long userId;
     private LocalDateTime addedAt = LocalDateTime.now(); // Default to current time
-
     private String description;
 }

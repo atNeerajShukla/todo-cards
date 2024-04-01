@@ -1,5 +1,6 @@
 package com.simplifiedjs.todocard.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,6 +20,11 @@ public class User {
   @NotBlank(message = "Name is required")
   private String name;
 
+  @Column(unique = true)
+  @NotBlank(message = "Username is required")
+  private String username;
+
+  @Column(unique = true)
   @Email(message = "Enter a valid Email")
   @NotBlank(message = "Email is required")
   private String email;
